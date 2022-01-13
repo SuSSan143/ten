@@ -1,0 +1,163 @@
+/* General navbar classes  */
+body {
+  margin: 0;
+  padding: 0;
+}
+.nav_container {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.nav_hamburguer_icon {
+  font-size: 2.2em;
+  display: block;
+  position: absolute;
+  top: 240%;
+  left: 120px;
+}
+.nav_hamburguer_icon:hover {
+  color: grey;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 35px;
+  padding: 1rem;
+}
+.nav_brand {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.nav_links {
+  text-align: center;
+  display: none;
+}
+
+.divider {
+  display: inline-block;
+  width: 0;
+  height: 2em;
+  border-right: 1px solid #000;
+}
+
+.nav_links a {
+  margin: 0;
+  padding: 0.5em;
+}
+.image {
+  position: relative;
+  left: 23%;
+}
+
+@media screen and (max-width: 720px) {
+  nav {
+    left: -80px;
+  }
+}
+
+/* @media (min-width: 1200px) and (max-width: 600px) {
+  .nav_links > a {
+    font-size: 1.2rem;
+  }
+} */
+
+@media screen and (min-width: 600px) {
+  .nav_links {
+    position: relative;
+    left: 120px;
+    width: 68%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .nav_links > a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 1.42em;
+  }
+  .nav_hamburguer_icon {
+    display: none;
+  }
+  .overlay_container_hidden {
+    display: none;
+  }
+}
+
+/*Overlay menu classes */
+.overlay_container_show {
+  overflow: hidden;
+  position: fixed;
+  background-color: black;
+  opacity: 0.9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: left linear 500ms;
+}
+
+.overlay_container_hidden {
+  overflow: hidden;
+  position: fixed;
+  background-color: black;
+  opacity: 0.9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -600px;
+  width: 100%;
+  z-index: 1;
+  transition: left linear 500ms;
+}
+
+.overlay_buttonClose {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 0.5em;
+  font-size: 4em;
+}
+
+.overlay_menu_wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.overlay_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 10em;
+}
+
+.overlay_menu a {
+  font-size: 3em;
+  font-weight: 100;
+  text-decoration: none;
+  color: #818181;
+  transition: 0.3s;
+}
+
+.overlay_menu a:hover,
+.overlay_menu a:focus {
+  color: #f1f1f1;
+}
